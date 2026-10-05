@@ -1,0 +1,36 @@
+# 確認用プレビューを GitHub Pages に公開する。
+# 本番用のHTMLには手を入れず、公開物にだけ「検索エンジンに載せない」設定を足す。
+name: Preview (GitHub Pages)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build preview (add noindex)
+        run: |
+          mkdir _site
+          rsync -a --exclude '.git*' --exclude '.github' --exclude '*.md' ./ _site/
+          find _site -name '*.html' -print0 | xargs -0 sed -i 's#<head>#<head>\n<meta name="robots" content="noindex, nofollow">#'
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

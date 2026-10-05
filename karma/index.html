@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="indigo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>女のカルマ浄化講座 ── 男性を赦す3ヶ月 | 千神弥生</title>
+<meta name="description" content="あの人を赦せないのは、あなたのせいではありません。女性が代々受け継いできた「女のカルマ」を浄化し、わたしが変わる。千神弥生の3ヶ月講座。">
+<meta property="og:title" content="女のカルマ浄化講座 ── 男性を赦す3ヶ月 | 千神弥生">
+<meta property="og:description" content="あの人を赦せないのは、あなたのせいではありません。まずは無料の女カルマタイプ診断から。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/brand.css">
+<style>
+/* ===== LP① 固有 ===== */
+
+/* Hero ── 共鳴（写真を背景いっぱいに） */
+.hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; background: var(--bg-dark); color: var(--text-on-dark); overflow: hidden; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, var(--bg-dark) 0%, rgba(22,27,51,0.6) 30%, rgba(22,27,51,0) 50%); pointer-events: none; }
+.hero-txt { position: relative; z-index: 1; padding: 72px 7vw; max-width: 680px; }
+.hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.3em; color: var(--gold-light); margin-bottom: 32px; }
+.hero h1 { font-size: clamp(1.7rem, 3.6vw, 3rem); font-weight: 400; line-height: 1.8; letter-spacing: 0.1em; margin-bottom: 28px; }
+.hero h1 em { font-style: normal; color: var(--gold-light); }
+.nw { white-space: nowrap; }
+.hero-sub { font-size: 1rem; line-height: 2.2; color: var(--text-on-dark-soft); margin-bottom: 40px; }
+.hero .btn-note { color: var(--text-on-dark-soft); opacity: 1; }
+@media (max-width: 719px) {
+  .hero { display: block; min-height: auto; }
+  .hero-img { position: relative; display: block; width: 100%; height: auto; }
+  .hero::after { display: none; }
+  .hero-txt { margin-top: -64px; padding: 0 20px 64px; text-align: center; }
+  .hero h1 { font-size: clamp(1.45rem, 6.6vw, 1.9rem); }
+}
+
+/* Image art（光の糸） */
+.section { overflow-x: clip; }
+.art { display: block; height: auto; pointer-events: none; }
+.art-bleed { width: 100vw; max-width: none; margin-left: calc(50% - 50vw); }
+/* 光の糸（動く版）：動けるときは canvas、止めるときは静止画 */
+.art-live { position: relative; }
+.art-live canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: none; }
+.art-live.is-live canvas { display: block; }
+.art-live.is-live img { visibility: hidden; }
+
+.art-ascend { margin-top: -48px; margin-bottom: 8px; }
+.art-fire-sea { margin-top: -8px; margin-bottom: 16px; }
+@media (max-width: 719px) { .art-ascend { width: 150vw; margin-left: calc(50% - 75vw); margin-top: -24px; } }
+
+/* Question ── 共鳴 */
+.q-list { list-style: none; max-width: 560px; margin: 0 auto; }
+.q-list li { padding: 20px 0 20px 28px; position: relative; font-size: 1rem; line-height: 2; color: var(--text-light); border-bottom: 1px solid rgba(168,144,110,0.2); }
+.q-list li::before { content: ''; position: absolute; left: 4px; top: 34px; width: 8px; height: 8px; border: 1px solid var(--accent-soft); transform: rotate(45deg); }
+.q-close { margin-top: 48px; text-align: center; line-height: 2.2; color: var(--text-light); }
+.q-close strong { display: block; margin-top: 8px; font-size: 1.15rem; font-weight: 500; color: var(--accent); }
+
+/* Karma ── 女のカルマ */
+.karma-accent { margin: 44px 0; padding: 8px 0 8px 24px; border-left: 2px solid var(--gold); font-size: 1.1rem; line-height: 2.1; color: var(--text); }
+
+/* Dialogue ── 第三の道 */
+.ways { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 8px; }
+.way { padding: 28px 28px 26px; background: var(--white); border: 1px solid rgba(168,144,110,0.22); border-radius: var(--radius); }
+.way-label { font-size: 0.72rem; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 6px; }
+.way h3 { font-size: 1.15rem; font-weight: 500; letter-spacing: 0.08em; margin-bottom: 8px; }
+.way p { font-size: 0.95rem; line-height: 2; color: var(--text-light); }
+.way--third { background: var(--accent); border-color: var(--accent); color: var(--text-on-dark); }
+.way--third .way-label { color: var(--gold-light); }
+.way--third p { color: var(--text-on-dark-soft); }
+
+/* Ascension ── 次元上昇（旅立ち→帰還） */
+.ascend { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 12px 0 48px; }
+.ascend-step { width: 100%; max-width: 460px; text-align: center; padding: 22px 16px; border: 1px solid rgba(205,191,160,0.35); border-radius: var(--radius); }
+.ascend-step small { display: block; font-size: 0.7rem; letter-spacing: 0.28em; color: var(--gold-light); margin-bottom: 4px; }
+.ascend-step span { font-size: 1.1rem; letter-spacing: 0.08em; }
+.ascend-step--top { background: rgba(205,191,160,0.12); }
+.ascend-arrow { width: 1px; height: 36px; background: linear-gradient(180deg, rgba(205,191,160,0.2), var(--gold-light)); }
+.section--dark .body { color: var(--text-on-dark-soft); }
+.section--dark .body strong { color: var(--text-on-dark); }
+
+/* Types ── 4つのタイプ（名前のみ） */
+.types { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0 44px; }
+.type { padding: 24px 12px 20px; text-align: center; background: var(--white); border-top: 3px solid var(--c); border-radius: var(--radius); }
+.type-name { font-size: 1.35rem; letter-spacing: 0.15em; color: var(--c); margin-bottom: 4px; }
+.type-tag { font-family: var(--font-sans); font-size: 0.74rem; line-height: 1.8; letter-spacing: 0.04em; color: var(--text-light); }
+
+/* Course ── 講座 */
+.course-name { text-align: center; margin-bottom: 40px; }
+.course-name b { display: block; font-size: 1.5rem; font-weight: 500; letter-spacing: 0.12em; }
+.course-name span { font-size: 0.9rem; color: var(--text-light); }
+.stages { list-style: none; position: relative; }
+.stages::before { content: ''; position: absolute; left: 21px; top: 28px; bottom: 28px; width: 1px; background: linear-gradient(180deg, var(--accent-pale), var(--accent-soft), var(--gold)); }
+.stage { display: flex; gap: 22px; padding: 22px 0; }
+.stage-no { flex-shrink: 0; width: 43px; height: 43px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--bg); border: 1px solid var(--accent-soft); font-size: 0.72rem; color: var(--accent); position: relative; z-index: 1; }
+.stage:last-child .stage-no { background: var(--accent); color: #fff; border-color: var(--accent); }
+.stage h3 { font-size: 1.08rem; font-weight: 500; letter-spacing: 0.06em; line-height: 1.7; margin-bottom: 4px; }
+.stage h3 small { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--gold); margin-right: 10px; }
+.stage p { font-size: 0.95rem; line-height: 2; color: var(--text-light); }
+.course-meta { margin-top: 36px; padding: 24px; background: var(--bg-deep); border-radius: var(--radius); font-family: var(--font-sans); font-size: 0.88rem; line-height: 2; color: var(--text-light); }
+.course-meta dt { font-weight: 500; color: var(--text); }
+.course-meta dd { margin-bottom: 8px; }
+.course-meta dd:last-child { margin-bottom: 0; }
+
+/* Profile */
+.profile { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
+.profile-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 8px 28px rgba(27,29,42,0.12); }
+.profile-name { font-size: 1.5rem; letter-spacing: 0.2em; }
+.profile-role { font-size: 0.8rem; letter-spacing: 0.15em; color: var(--gold); margin-top: 4px; }
+.profile-link { display: inline-block; margin-top: 28px; font-size: 0.9rem; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); padding-bottom: 2px; }
+
+/* Course photo */
+.course-photo { max-width: 560px; margin: 8px auto 40px; }
+.course-photo img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 8px 28px rgba(27,29,42,0.12); }
+
+/* Final CTA */
+.final { text-align: center; }
+.final .heading { margin-bottom: 24px; }
+.final .body { color: var(--text-on-dark-soft); margin: 0 auto 44px; max-width: 480px; }
+.final .btn-note { color: var(--text-on-dark-soft); opacity: 1; }
+.disclaimer { margin-top: 40px; font-family: var(--font-sans); font-size: 0.72rem; line-height: 1.9; color: var(--text-on-dark-soft); opacity: 0.8; }
+
+/* Sticky CTA (SP) */
+.sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(22,27,51,0.94); backdrop-filter: blur(6px); transform: translateY(110%); transition: transform .35s ease; display: none; }
+.sticky-cta.show { transform: none; }
+.sticky-cta .btn { width: 100%; max-width: none; padding: 15px 16px; font-size: 0.95rem; }
+
+@media (min-width: 720px) {
+  .ways { grid-template-columns: 1fr 1fr 1fr; }
+  .types { grid-template-columns: repeat(4, 1fr); }
+  .profile { flex-direction: row; text-align: left; align-items: flex-start; }
+}
+@media (max-width: 719px) {
+  .sticky-cta { display: block; }
+  .site-footer { padding-bottom: 96px; }
+}
+</style>
+<script src="karma.js"></script>
+</head>
+<body>
+
+<!-- ============ HERO（共鳴） ============ -->
+<header class="hero">
+  <picture>
+    <source media="(max-width: 719px)" srcset="../assets/img/hero-karma-sp_v2.jpg" width="900" height="892">
+    <img src="../assets/img/hero-karma-pc_v2.jpg" alt="千神弥生" class="hero-img" width="1920" height="1080" fetchpriority="high">
+  </picture>
+  <div class="hero-txt">
+    <p class="hero-eyebrow">女のカルマ浄化 ── 男性を赦す3ヶ月</p>
+    <h1><span class="nw">あの人を赦せないのは、</span><br><span class="nw"><em>あなたのせい</em>では</span><br><span class="nw">ありません。</span></h1>
+    <p class="hero-sub">女性が代々受け継いできた<br>「女のカルマ」を浄化し、<br>わたしが変わる。わたしが、次元上昇する。</p>
+    <a href="check/index.html" class="btn btn--gold js-to-check" data-pos="hero">女カルマタイプを診断する</a>
+    <p class="btn-note">無料・20問・約3分</p>
+  </div>
+</header>
+
+<!-- ============ QUESTION（共鳴） ============ -->
+<section class="section">
+  <div class="inner reveal">
+    <span class="label">Question</span>
+    <h2 class="heading">こんな想いを、<br>抱えていませんか</h2>
+    <ul class="q-list">
+      <li>夫のことを、前のように愛せなくなった。いつからなのか、もう思い出せない。</li>
+      <li>離れたい気持ちと、踏み切れない気持ちのあいだで、ずっと揺れている。</li>
+      <li>裏切られた。怒りなのか悲しみなのか、自分でもわからない。</li>
+      <li>「私さえ我慢すれば」と、今日も自分の気持ちを後回しにした。</li>
+      <li>彼に愛されているか不安で、確かめずにはいられない。</li>
+      <li>男性に頼ることが、どうしてもできない。</li>
+    </ul>
+    <p class="q-close">ひとつでも心あたりがあるなら、<br>どうか最後まで読んでください。<strong>苦しいのには、理由があります。</strong></p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ KARMA（女のカルマ） ============ -->
+<section class="section section--deep">
+  <div class="inner reveal">
+    <span class="label">Karma</span>
+    <h2 class="heading">その苦しさは、<br>あなたひとりのものでは<br>ありません</h2>
+    <div class="body">
+      <p>「私が悪いんだ」「もっと頑張らなければ」。そう思って、今日までひとりで抱えてきたかもしれません。</p>
+      <p>けれど、その苦しさの根は、あなたの性格や努力不足にあるのではありません。長い歴史のなかで、女性たちが声にできなかった男性への怒り、悲しみ、あきらめ。それは母から娘へ、<strong>代々受け継がれてきたもの</strong>です。</p>
+      <p>千神弥生は、これを<strong>「女のカルマ」</strong>と呼んでいます。</p>
+    </div>
+    <p class="karma-accent">結婚や出産をきっかけに、<br>眠っていたカルマが目を覚ますことがあります。</p>
+    <div class="body">
+      <p>結婚する前は、うまくいっていた。子どもを産んでから、自分でも驚くほど苦しくなった。それはあなたが変わってしまったからではなく、受け継いできたものが動き出したのかもしれません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIALOGUE（第三の道） ============ -->
+<section class="section">
+  <div class="inner reveal">
+    <span class="label">The Third Way</span>
+    <h2 class="heading">相手を変えるか、<br>我慢するか。<br><em>そのどちらでもない道</em>が<br>あります</h2>
+    <div class="ways">
+      <div class="way">
+        <p class="way-label">ひとつめ</p>
+        <h3>相手を変えようとする</h3>
+        <p>話し合い、責め、期待する。けれど人は、誰かに変えられることを拒みます。</p>
+      </div>
+      <div class="way">
+        <p class="way-label">ふたつめ</p>
+        <h3>自分が我慢する</h3>
+        <p>波風を立てずにやり過ごす。そのたびに、本当の自分が小さくなっていきます。</p>
+      </div>
+      <div class="way way--third">
+        <p class="way-label">みっつめ</p>
+        <h3>わたしが赦す</h3>
+        <p>相手を変えず、我慢もしない。受け継いだカルマを浄化し、わたしが変わる道です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASCENSION（旅立ち → 次元上昇 → 帰還） ============ -->
+<section class="section section--dark">
+  <div class="inner reveal">
+    <span class="label">Ascension</span>
+    <h2 class="heading">カルマを浄化すると、<br><em>わたしが次元上昇する</em></h2>
+    <div class="art-live art-bleed art-ascend" data-kind="ascend"><img src="../assets/img/art-ascend.webp" alt="" class="art" width="1600" height="678" loading="lazy" style="width:100%"><canvas aria-hidden="true"></canvas></div>
+    <div class="ascend">
+      <div class="ascend-step"><small>赦す技術で</small><span>女のカルマを浄化する</span></div>
+      <div class="ascend-arrow"></div>
+      <div class="ascend-step"><small>すると</small><span>わたしが、一段上のステージへ</span></div>
+      <div class="ascend-arrow"></div>
+      <div class="ascend-step ascend-step--top"><small>そして</small><span>本来のわたしへ、還っていく</span></div>
+    </div>
+    <div class="body">
+      <p>次元上昇とは、同じ景色を一段上から見られるようになること。これまで責める相手だったあの人が、<strong>わたしを映す鏡</strong>に変わっていきます。</p>
+      <p>変わるのは、相手ではなく、わたし。関係の行き先を決めるのは、変わったあなた自身です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TYPES（名前のみ・詳細は診断とLINE） ============ -->
+<section class="section section--deep">
+  <div class="inner reveal">
+    <span class="label">4 Types</span>
+    <h2 class="heading">女のカルマには、<br>4つのタイプがあります</h2>
+    <div class="types">
+      <div class="type" style="--c: var(--type-seijo)"><p class="type-name">聖女</p><p class="type-tag">捧げることで<br>存在を証明する</p></div>
+      <div class="type" style="--c: var(--type-otome)"><p class="type-name">乙女</p><p class="type-tag">愛されることで<br>存在を証明する</p></div>
+      <div class="type" style="--c: var(--type-miko)"><p class="type-name">巫女</p><p class="type-tag">感じ取ることで<br>存在を証明する</p></div>
+      <div class="type" style="--c: var(--type-ressho)"><p class="type-name">烈女</p><p class="type-tag">強さで<br>存在を証明する</p></div>
+    </div>
+    <div class="body center">
+      <p>どの女性の中にも、4つすべてがあります。<br>どれが強く出ているかは、人によって違います。</p>
+    </div>
+    <p class="center" style="margin-top: 40px;">
+      <a href="check/index.html" class="btn btn--gold js-to-check" data-pos="types">あなたのタイプを診断する</a>
+    </p>
+    <p class="btn-note center">無料・20問・約3分</p>
+  </div>
+</section>
+
+<!-- ============ COURSE（帰還） ============ -->
+<section class="section section--white">
+  <div class="inner reveal">
+    <span class="label">Course</span>
+    <h2 class="heading">知る。認める。<br>そして、<em>還る</em>。</h2>
+    <div class="art-live art-bleed art-fire-sea" data-kind="firesea"><img src="../assets/img/art-fire-sea.webp" alt="" class="art" width="1600" height="420" loading="lazy" style="width:100%"><canvas aria-hidden="true"></canvas></div>
+    <div class="course-name">
+      <b>女のカルマ浄化講座</b>
+      <span>男性を赦す3ヶ月 ／ オンライン・全6回</span>
+    </div>
+    <figure class="course-photo">
+      <img src="../assets/img/course-talk.jpg" alt="講座で語る千神弥生" width="1200" height="900" loading="lazy">
+    </figure>
+    <ol class="stages">
+      <li class="stage">
+        <span class="stage-no">1ヶ月</span>
+        <div><h3><small>知る</small>なぜ苦しかったのかが、腑に落ちる</h3><p>4つのタイプと、その光と影を知る。自分の内側の地図を手に入れます。</p></div>
+      </li>
+      <li class="stage">
+        <span class="stage-no">2ヶ月</span>
+        <div><h3><small>認める</small>受け継いできたものを、認めて手放す</h3><p>男性への怒りや悲しみを否定せずに見つめ、少しずつ手放していきます。</p></div>
+      </li>
+      <li class="stage">
+        <span class="stage-no">3ヶ月</span>
+        <div><h3><small>還る</small>存在するだけで価値がある、わたしへ</h3><p>あの人を鏡として見る入り口に立ち、本来のわたしへ還っていきます。</p></div>
+      </li>
+    </ol>
+    <dl class="course-meta">
+      <dt>形式</dt><dd>Zoomによるオンライン講座（月2回 × 3ヶ月）</dd>
+      <dt>日程・受講料</dt><dd>LINEにてご案内しています</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ VOICE（許諾つきの声が揃ったら追加）
+<section class="section">…</section>
+============ -->
+
+<!-- ============ PROFILE（存在） ============ -->
+<section class="section">
+  <div class="inner reveal">
+    <span class="label">Guide</span>
+    <div class="profile">
+      <img src="../assets/img/chigami-yayoi-profile.jpg" alt="千神弥生" class="profile-photo" width="200" height="200" loading="lazy">
+      <div>
+        <p class="profile-name">千神 弥生</p>
+        <p class="profile-role">千神流「赦す技術」主宰</p>
+        <div class="body" style="margin-top: 20px;">
+          <p>光と影を見つめ、祈りと言葉で場を包む人。</p>
+          <p>どんなに重い話も、同じ景色に立って聞きます。責めることも、急かすこともしません。女性が本来のわたしへ還っていく道のりに、最後まで寄り添います。</p>
+        </div>
+        <a href="../index.html" class="profile-link">千神流「赦す技術」について</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section section--dark final">
+  <div class="inner reveal">
+    <span class="label">First Step</span>
+    <h2 class="heading">まずは、<br>あなたの女カルマタイプを<br>知ることから</h2>
+    <p class="body">タイプがわかるだけで、「だから苦しかったんだ」と腑に落ちることがあります。赦しの旅は、そこから始まります。</p>
+    <a href="check/index.html" class="btn btn--gold js-to-check" data-pos="final">無料で診断する</a>
+    <p class="btn-note">診断結果の詳しい解説は、LINEでお届けします</p>
+    <p class="disclaimer">本講座は、ご自身の内面を見つめるための学びの場です。医療・心理療法の代わりとなるものではなく、特定の結果を保証するものではありません。</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <nav><a href="../index.html">千神流「赦す技術」</a><a href="../privacy/index.html">プライバシーポリシー</a><a href="../tokushoho/index.html">特定商取引法に基づく表記</a></nav>
+  <small>&copy; Yayoi Chikami ── 千神流 赦す技術</small>
+</footer>
+
+<div class="sticky-cta" id="sticky"><a href="check/index.html" class="btn btn--gold js-to-check" data-pos="sticky">無料で女カルマタイプを診断する</a></div>
+
+<script>
+document.querySelectorAll('.js-to-check').forEach(function (a) {
+  a.addEventListener('click', function () {
+    karmaTrack('to_diagnosis', null, { position: a.dataset.pos });
+  });
+});
+// SP固定CTA：ヒーローを過ぎたら表示、最終CTAが見えたら隠す
+(function () {
+  var sticky = document.getElementById('sticky');
+  var hero = document.querySelector('.hero');
+  var final = document.querySelector('.final');
+  if (!('IntersectionObserver' in window)) return;
+  var heroOut = false, finalIn = false;
+  function update() { sticky.classList.toggle('show', heroOut && !finalIn); }
+  new IntersectionObserver(function (e) { heroOut = !e[0].isIntersecting; update(); }).observe(hero);
+  new IntersectionObserver(function (e) { finalIn = e[0].isIntersecting; update(); }).observe(final);
+})();
+</script>
+<script src="../assets/js/threads.js" defer></script>
+</body>
+</html>

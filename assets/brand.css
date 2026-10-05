@@ -1,0 +1,158 @@
+/* ==========================================================
+   千神流「赦す技術」 brand.css
+   2層構造：
+   1) Brand layer … 全ページ共通（書体・金・余白・部品）
+   2) Theme layer … data-theme で切替
+        sakura = ホームページ（/）
+        indigo = プロジェクト①「男性を赦す」（/karma/ 以下）
+   ========================================================== */
+
+/* ---------- 1) Brand layer ---------- */
+:root {
+  --font-serif: 'Shippori Mincho', 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
+  --font-sans: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+
+  --gold: #a8906e;
+  --gold-light: #cdbfa0;
+  --white: #fffdfb;
+  --line-green: #06C755;
+  --line-green-hover: #05b04c;
+
+  --space-section: 104px;
+  --space-section-sp: 72px;
+  --width-content: 680px;
+  --radius: 2px;
+}
+
+/* ---------- 2) Theme layer ---------- */
+[data-theme="sakura"] {
+  --bg: #faf8f5;
+  --bg-deep: #f2ede6;
+  --bg-dark: #2c2420;
+  --text: #221c19;
+  --text-light: #54453c;
+  --text-on-dark: #fffdfb;
+  --accent: #c47690;
+  --accent-soft: #e0a8bc;
+  --accent-pale: #f3d8e2;
+}
+
+[data-theme="indigo"] {
+  --bg: #f7f6f3;
+  --bg-deep: #ecebf0;
+  --bg-dark: #161b33;
+  --bg-dark-2: #222a4d;
+  --text: #1b1d2a;
+  --text-light: #4a4c5e;
+  --text-on-dark: #f4f2ee;
+  --text-on-dark-soft: rgba(244, 242, 238, 0.72);
+  --accent: #34407a;
+  --accent-soft: #7b86bd;
+  --accent-pale: #dfe2f1;
+
+  /* 4類型の色（診断で使用） */
+  --type-seijo: #4f4aa8;
+  --type-otome: #9b3a5c;
+  --type-miko: #1f6e5a;
+  --type-ressho: #9a4a24;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 17px; }
+body {
+  font-family: var(--font-serif);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 2;
+  letter-spacing: 0.06em;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ---------- Layout parts ---------- */
+.section { padding: var(--space-section) 24px; }
+.section--deep { background: var(--bg-deep); }
+.section--white { background: var(--white); }
+.section--dark { background: linear-gradient(170deg, var(--bg-dark) 0%, var(--bg-dark-2, var(--bg-dark)) 100%); color: var(--text-on-dark); }
+.inner { max-width: var(--width-content); margin: 0 auto; }
+
+.label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.heading {
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.9;
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
+.heading em { font-style: normal; color: var(--accent); }
+.section--dark .heading em { color: var(--gold-light); }
+.body { font-size: 1rem; font-weight: 400; line-height: 2.3; color: var(--text-light); }
+.body p + p { margin-top: 1.8em; }
+.body strong { color: var(--text); font-weight: 600; }
+.center { text-align: center; }
+
+.rule {
+  height: 1px; max-width: 120px; margin: 0 auto;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 18px 40px;
+  font-family: var(--font-serif); font-size: 1rem; font-weight: 500;
+  letter-spacing: 0.12em; text-decoration: none;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease, opacity .3s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--gold { background: var(--gold); color: #fff; }
+.btn--gold:hover { box-shadow: 0 8px 28px rgba(168, 144, 110, 0.35); }
+.btn--line { background: var(--line-green); color: #fff; }
+.btn--line:hover { background: var(--line-green-hover); box-shadow: 0 8px 28px rgba(6, 199, 85, 0.3); }
+.btn--ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent-soft); }
+.btn-note { margin-top: 14px; font-size: 0.75rem; letter-spacing: 0.08em; opacity: 0.7; }
+
+/* ---------- Photo placeholder ---------- */
+.ph {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: var(--bg-deep); color: var(--text-light);
+  border: 1px dashed var(--accent-soft);
+  font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.08em; line-height: 1.8;
+  padding: 16px;
+}
+
+/* ---------- Reveal ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease-out, transform .8s ease-out; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Footer ---------- */
+.site-footer { padding: 48px 24px; text-align: center; background: var(--bg); }
+.site-footer small { font-size: 0.7rem; letter-spacing: 0.12em; color: var(--text-light); }
+.site-footer a { font-size: 0.8rem; color: var(--text-light); }
+.site-footer nav { margin-bottom: 16px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .section { padding: var(--space-section-sp) 20px; }
+  .heading { margin-bottom: 36px; }
+  .btn { padding: 17px 28px; width: 100%; max-width: 360px; }
+}

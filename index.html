@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>千神流 赦す技術 | 愛の循環を、取り戻す。</title>
+<meta name="description" content="赦せない痛みが、あなたの愛を止めている。千神弥生が導く、Mother Codeによる赦しと解放のプロセス。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #faf8f5;
+  --color-bg-deep: #f2ede6;
+  --color-text: #221c19;
+  --color-text-light: #54453c;
+  --color-accent: #c47690;
+  --color-accent-soft: #e0a8bc;
+  --color-accent-pale: #f3d8e2;
+  --color-gold: #a8906e;
+  --color-gold-light: #cdbfa0;
+  --color-white: #fffdfb;
+  --font-serif: 'Shippori Mincho', 'Noto Serif JP', '游明朝', 'Yu Mincho', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 17px;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 2;
+  letter-spacing: 0.08em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Utility ── */
+.nw { display: inline-block; white-space: nowrap; }
+.section-spacer {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-light), transparent);
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  background: linear-gradient(170deg, #f9f5f0 0%, #f0e8df 40%, #ebe3da 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--color-accent-pale) 0%, transparent 70%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(184, 160, 128, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-logo {
+  width: 420px;
+  max-width: 82vw;
+  height: auto;
+  margin-bottom: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f9f5f0, #f0e8df);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.3s forwards;
+}
+
+
+/* ── ロゴ：ピンクの線の中を、光と液体がゆっくり巡る ── */
+:root { --logo-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoCAQAAADQ7KleAAAeyUlEQVR42u2dd5xcdb3337/Z3WQ3m56QXukthPbQsQCKgjyC9/GhCcKDgIpy4QKhRARpoqhYqHKV5pWicOWCNJESkCQCoYRISw+pkF63nc/zx0wm55yZTbZMlN35vM9LyZ7dOWdmzvt8z/fXgzCm85DxV2AstDEW2hgLbYyFNhbaGAttjIU2xkIbY6GNhTbGQhtjoY2x0MZYaGOhjbHQxlhoYyy0MRbaWGhjLLQxFtoYC22MhTYW2hgLbYyFNsZCG2OhjYU2xkIbY6GNsdDGWGhjoY2x0MZYaGMstLHQxlhoYyy0MRbaGAttLLQxFtoYC22MhTbGQhsLbYyFNsZCG2OhjbHQxkIbY6GNsdDGWGhjLLSx0MZYaGMstDEW2hgLbSy0MRbaGAttjIU2xkIbC22MhTbGQhtjoY2x0MZCG2OhjbHQxrSOSn8FmyXE/l+5/2V/Tu9ryRE20ppXKf+KTeeN7zPJL87fyhakUuJ5VgGIpsTe0KxeYTPiteZVGSqBJqLY3mCpLXRrVN74xXRnCEPZhl7UUkM1ELGB9axmJUuYwxLq8q9S0SP0YRBD6Ek1gSY2sIJ5LGDDZkUO9GY0g+lDb6qppgsZ6tlAHStZzkJmsCwWtS22hd6izN3ox74cynCGMJT+1Kb+TqxmCbP5iHk8x+usyIu9Ue0uDOKz7McwBjA0J3RjTuj5zOBJ3mFFXstABGToyTAOZixDGM0g+lCVOm/EChYxkwW8zkt8yKrc62SpLXShzNmvYyRjOZKDGcTARN5bLKICLGQBT/Ikb7Mid4yujOFLHM0O9GrmXI3MZwY/5Smi3NFr2IH9OI4dGEjPFpx3NYv4gP9hMu+yIfWEsND+JgBRya4cwVHsR/fcHsXEDQWaKRddIeJtzmYyoop9OZZj2ZZKICooEmaPmiGwmPH8jjqgD5/is3yObanOxeFNrwqp4uTG/2ZrqOqYxVM8zUusstQWOhmbd+EUvsROdInJ2hJEYB4/4y5W0J+vczq7bfYIIrCBv3ArL7COXhzOKRyYfxqohWeN/+UC/srdTGRd2Sstb0EIDdQ3NEX1kqRIkZJERbY4c3WmqoV21N1aX/QISRbpCg0RqtTB+q2Wxc6xpbMWHjdSkyRpnn6iPWKfqCw36xyEanSMHtHqIjJHitSUE6aYSNnfzde3VKOgT+nZ3G8Kb4em3BZJelMnqavQYI3T+608a/a8xdSXGvWmztPAcla63FOOgBjAOZzO8IKHvRIFsHmspokmGqkkQyW9GEkNAGu4iptZx6H8iAMLEobCtOMVLucvRIxhPMfQrchZN76ing9ZRj2ikQoyBGoYwoBmjywCa3iMn/Cac+hyFXoXLuN4KolyhbtkdlrPLKbwIdOZzHwa8vlpF0ZyMKMZzrY8yw9Zyu78gsMScipf1FzBdBaxlHVU08TveYEqPsMPOCAl5cafGlnIFGYzj1eZzpr8WSvow16MZRv2YPdcTUixI7zO93ma+nLMp8tb6Ayf4zI+VVCsgEATc/gbz/APprOi2SNswyDmsYLB/IwTUjoHYBWv8zhTmcdSVrGeKipZS1dOYDw7FMTmgFjMKzzKu7zP4mbPWsH27MShHMEO1BZ5sgRm8SvuzFciulBYFluFjte0gow3ktSkKbpO+6p37i8zCkW2jDK533fXdapLHCmStFZP6nQNz/8VCgpC1TpLc1Pnzf57tu7QURqQ/+vmzpvNkGu0g76tp7S6SA4uLdPV6l1+2XT5FgQrdIpmFdVqnn6oXXMahpyEzR0nqELoaC0s0HmJrtZgIdRLw9Q1L2OVTiyq8zo9pCNVnVB5c+fd+NuBOlNTFBU54nJdoZ6u5SgPoYO+oulFJFijh/QFVeejaUu2kXqmoCZivv5dPYV66wT9t/6uc3PHRIcVPBUiRXpNZ2mQUIV20LHaMxbVt/Q5ENpTt+njIrUrH2u8epRXlC7X+PwZTZESFWORpDm6SINaJTMKukDrU9F5vs5SjYJ21m1aLklarJMUhHbRi4nzRpLW6z7trQqhkbpIk7VKj+XeRculrtVJejVVZRhJ+kjn5p4OFroT6zxUTxSJzu/oGFW2Kp4FoW31YuxYkSKt1Dh1E9pbj6kp3/DxhvZTf91VoPMa3aLBQlU6Qn9WnSRppU5plYJBKKO99adULt0kaaYOL6cYXY4699QtuQaO+IV/RYe1MjZnj3aqVqY0ekgDhUbqkVjLXqQmPapbtCJ1E63UDRok1FNn6518k0qkP6pbKzUMQsP1n1qfeDeRpOe1Y/koXX5CV+qbWl7waJ6kA1p90YNQb92ViM/SAh2tILRbkaSmqUDnq9U3V9+yJF9XEUmapn1FCzNp8nUxaBvdpoaY0pEi1esm9SoXpcsvPo/R1AKd39AhbbjgQWgfzUsJfWMuZ63UyYnfFTZgb9BN6perFPyyVsSieaQ6ndNqobN/P0j3FXy+FTrZQnfOrat+rIbU5Z6ho9p0uYMq9P9yXZE2FSsPzymKuujcXJGwmM7S7zU0n+QM0qMxDZsk3aHubbzJRurxgnM9p9HloXS5xefDU3XPkZbqW6psQz1ANhv/n8TjXfrvRDVZja5NNbhsEvZl7ZaPwUHogkTGLb2rvdp4m6H9NSX1KddrnCrKQenymcYgIHrxNUalGqjv5T4a2ziAqZZhie7/a3mONbEORuu5haeLNM5mWMBPmEaGKN8VaSLvJxqwh9GnjU2/gVf4FcsTzd7VHM/O5dGboZw4mGNSfTYmcysrWtyhPs1AuiWOtoZXYxKJDPP5JXNTPSoC9dzG47lRhBtfO5XpkBhm26fNnzPiQe6nMfFZx/ClFg9YsNAdotNKN/43fdk0Tjqwkt/yfjs68AyhR+LnlSxOSBMReJbbWZe6jZ7gjoJR3+tirw1AF/aia5vemQis5Xam5T9ZQFRxDNsTdXaly0XoAGzHp1Py/o0/t6s32sjYYFaAhUUmJ4i4m7/mzysCM/kFi8gkYnlAzKYur5uo5AC6tzGmisBU7mJDLP0R+3CgI3Tn0Rk+z8h8/iwCK7iPhbRnTovB1CYy8iUxhTbF4/nclEs7BDTwIBNi6cYm8eeyPrFnQLvmtYr4M1NiMTrQlePo04oRixb6E51w9OQAavKyBWASz7Qzq6xJRfyVNBS9nSbwME25f7/JPbl/p1lOA6WcMmYGf6U+f4VFYE+2c4TuLOzHAcTnGWrgARa1swN8OsrWFezJnmsDd/M2AVjN7bzbzFkbSiizCEQ8mnoCDeIzFrqzpBzbMiwhzGtMbvdxG1IRvisVFJuFIzCVW1lF4DEeblbbbkVf3Xal4V2eyRcDAxE1jKWycycd5SF0RC/+VyybzhYI32v3hV1NfeIYg6luJmlo4gEeYza/ZlnR+CwCg+ma2Le2SLxv3W28midSacxoRjlCd4b4PCg2cjBbYTeNqN0j7ubHmlEAhlNTNMZmi6A3cj6Tip4zEMiwHd1iOb54r6CI2XpmMzN2FrEre4EjdMenZ6qZ4kNeLUEBbD6rEz/3TdVLJ5V+lT+xoZlzigqGJ6ry6nmFte3+3NOYQLzqrjdDHKE7fg1HYEwqdn7E/BIceW5M6AD0YPdmbxMRNvttD2NwIv+NmN3OZhCRYQMfxnLmbG18t3amMhb6X04lu+YmQdwYqWawvgQReilLEwL14LNUNftIV7MiBWB/dksU11awvCSffVaqV8fOsdZSC91BM+gKRlEZu6h1vF+0xri1tQjreCZRLMywV5sKXaKKsfRKCP0WH5akpmMGHyX2jWp2gl8L3WGooG/iItcxjcZ2R6lAPS/EIn1A7MbhrY5/AbELX469TsCrfFiSaWJmJ54i0Dc3gZmF7sB0TTUiN6WiVttZyLSEdDV8heGtzH1FJYezLZuafTKs4N0SdSRaQ33BE8tCd3C6FPSKKE2xKDCbF1KKHMRnW/WtBmAoX6VL4sb4gEmUphk8KvisVRa646ccW+NzikAjL8ca0AOiltMY1uLWuGwN9LGMIT5jfyOTmFMioZXovAqZVPONhe6gBcM4DSWK0AImMCG1+tX+fLUV32vELpxC98RiE0v5U7sLrZveYz1lRHkI3ZSKdZkSZZIisIoHU5V33TiD/Vs8vK0X/85eqX2P81pict/23cxVFrqzU1nSLkDP82ysPiJbZ3EeQ1vwFAhUcDInkSE+jmYu97KSUnUkDbEa+OwTocFCd3QaEuPrKGl/s8BSfsvClNJf4pt03cJZMogD+U6sB0f2afIHXi7p+0sXiOstdEenLhWVMs32uWhb2vESD9CUiKnd+AbHbTbtCEQM5yJ2IV7/HHibe6ijdB39s11a008VC93Bc+jGRLGtihElrY9dy51MSUxoIAYxjoM2U5csenMun0s9LdZyJ2+XdN79galxj42duSdH+Qi9KPFzFSMSTeHtj9FvcxurUmnHWC5nj6LpTSDQjTM5g+rUGPFHua/EEXRErJUUYFGqGs9CdzCyPdcWJZq6qxjWrgGoheeIeJA7aEwoHTiS78UG5iZf8RUuok9qFo+3uZElJUwKsj3Bk303FlvozhCh348tLS8Co+gCJS16reEmnkpNKBM4lssZklI6W2i8gm1Syy4v4WexcdqlYliq09N0llnojk0gYirrEpGvH71L/BwIzOH6ggGwVZzKeAbElMogvsgNbB/bJ6CRO7mfxhLqHFBu/qV4o837rEkMJLDQHZK1qcqqviUf0C/ES9yQ6n0MVZzF5floHIg4nB+zcypqR/wXN7K+xF2HxNDYjHYi0JQaY2OhOygreS/x8yD22ApPgsAf+HFqdUBRyVlcQC0igziUa1Jd+bOTg/2QxVthVcHRiTGEgRmp78FCd9Bi4eLYpAWBiGq2o6LEA/qz0zXewq9Ym6rC68Ku1Oai8w3sT3L+O5jENby3VRbJ7E+/xPubx0w6dU10eUToDPXMQIlLuTsjt8qts4qbuTdVBH2NG/gIcRS/YP/UEswZZnBVM6PB2/tuunEolYnbZ8Fm1qe10B0qRs9ibmKw6N5bab7kDIu5nj9Sv3FKeSYzjhcRx3Aju6VmvgvM4vs8tRW63QegD4dRkT9jhjrepqlzL5dcPp2T3mQq8cFSPTiQ6q1waSMCc7iCP+VmsHue83mWCo7nJnZMtBxGBGZzEfflipSlZ08GE5/+bBmvd/6HcXkQWMqMVL3v5+nH1hiSJAIzuJyHqeN5LmUiXfgaNzKCKPZ9iwyLuYyHtlrEzHAE2ySOvZQZnf1CV5aFzlmRJ7OcvvnqM9iWvUsyO0fx873PpUxgIlOo5RSuZGCiq1K2RvgH3L/VbmAxnLGE2Nx24jU+ppN3TiqnBYO205upNV/vUs1WW0gn5JYE6qOLc2sQJtelmqqjt+LnzQh9Jbb+dySpTl/v/Iskl1MH/0VMSvQ0C+zPHmytcdDZWufunM0lqUbubKvi5TxespEzxc7encPol4jGs1Ij1J1Dd/CkYx1PsC6WsYodOWSrPYIDEb34DhfQu6AvxztcxCObmUmpFAnHzhyVr+3IfsaneKtz13CUVy0HiClMjtV0QIZjUsu8lVKpAVzIOPoXHP/vnM8f6cIhqUq8Un7SKo5jGPGZPhbzQmryX+fQnSCPHqfGxOLu6/Wt3LqvpT7TNvqZ1hTJnV/SZxRUqZM0Q8+2YYXxlp19rKallmx+UtuUw8Kb5Sb02MRK35Gkv2lUiS90EOqv64vq/FcdLFSlEzVTUqQXdOBW+JyVulr1iXOv1TmtXjncQneArUo3qzFR07FOl5Q0RgehAfqxVhYsId+oR7SvUK3O0GxJTYoU6TkdVNIbKgjtmajPkaQ3tKPX+u6c26c1LxU1X9XuJb3Y/fVTrS5Y4btB92onoR46Vwti1WmRXihp4hHUVdeqMfYJIzXpSlWVg87lKHRP3ZGqjW7Q90p0uYNQL31fqwqSjSb9VkOFgk7TogLZH9eYEsbnQzQzdcu+pX3KIz6r7CaaCazivtjq2wGo5ET2KUFdR3YO/29xHj1So1Ei7uFK5pNBsX54m8rlR3IVO5WgRjwgBnIuoxJjVOp4YCsM7XItxyekYBhUrZ+qKZXf/k692h3Dgip1Tqx1blOycaeG54/eRWdrcUEEb9TvYn/Tnk/3Ha1PFXsnaftyic/lmHIEoV01JZV2LNNp7WwWDkJf1rwCnRv1Gw3JNUZv1P60WBa9UbsG/Vw92/3J9tBrqXewWmduhYpJC/2J2ip1odamhJqo3doRx4LQoXqjiM535nLn+F9WFCgtSat0obq26z10142x4qDUJOlhDSqf+FyeQgehYXosFSMb9HN1a8cRt9cTiSabjYlE8VruqoLkJJI0Tye0OZoGof+jhal0Y46OKCedyzVCZ9ODhTEBI0mL9dVcHtr6o9XoxkRTRrbe+QFtW1SnoKDuukwrEhG6SdJr2rdNAgahMXo5dYus11WqLK9rW55Co6BaXaeGVPXWRO3ZBp0yCjpJHyVkalKkpzaTxAShvrpaqxNKR5Lub2MT9QDdWxDxn9aocruy5Ss0GqbHUzo16Xfq30qdsoXMSbkIu0mmN3RIrCjYXH+Pm1WXeE5EWq3zVdFKoYOC/kOrUjrP1zHllW6Us9DZC/05zU4VzdbpAnVppdC9dFtBAW9hLn3ZUif8UXq0IK5O16dbJWJG6HDNKGguukHdyk3n8hY6qIuuLMh8p+tLrcyjT9bSVFFshb7doq5AQWgfTSnIpO9VnxYrnc2enyuSbowuv/hczkJnL/YIPZJoZGmSNFFjW6hC9gjPpGSq1y/Vs4U3RRD6quYX1Iqf0orXD9bvY+lO9kjv6rBy1Lm8hc5e8IP0ekF0e0BDWtUyl6wtmaydWxFfg2p0Q6L2OBtfh7bgGEGoWteqLvX+17YhD7fQnUbpE1KDWCOt14/Ue4tCBaHRejGVPy/WSa1KWYLQjnohFaOX6/QWCV2lb6bqVyI16nb1Lc/4bKGDUHddo3WpGLdM/6GaLSpRoe9qQ6KjpnSLaluZgwdldKJWpPLwxzVsC1IGVer4RM+6jWNTdizfK1ruQme34fpTQT3FfJ26WTGz2etLKQ2nau9Wx8Zsp9M7U0daqaM2e6Qg9KlUR/5I0gfl1jZooYtVe+2hlwtqkqfrc5upSc4W55KP+zpdo6o2tjV+WtNTTTN3qftmX7GTnil4zx/r9FxTj4Uu88TjMP2jINpN0v7NRLugoEr9UlFeqGx0bFtH+iDUVben5Pyg2ZbGbPb+WJHuTVe0uT9KJ9nKcyXZYrN2TOAGlqTmdd6fa5tZxwrESPZI/eaZNk4nnu2G/xAfJ/b2Z79mpp4QQ7meo0lOX1PPfdzauZcE8rwcLVeqiQe5mdWxiWcC4rOMZ3QRpQOwA7sRX9J4Ay+2ef2SAExlOvH5UXuzT2yqmPgENv0Yx3GJ80TAY/yIJeV+RS30Jtbyc26nIRGlMxybW5qtMKaOpH9i/yu80uZ5mAQs5WmU2LMdA4uceQAXcxpVsYnTRYaXuYKZhM69rKaFbl3asYof8nuSM/134WQuZlAqUopadk1NtfUW09sxKjBDPa+xJjHacSSjCuJ4Ly7i24nVYSMCb3JpiVegtdCdQullXMEfUlp05XQuYVAs8QhAd7aNvTLD+oJFL1ofo+em5m8eylDiS/6IHnybM6glvWDnRbxonS10MaXncCkPpfZWczaXpR7/tanoubwE60vN5h/EVxXsGVtNMavzWZxHH5LL3b/PZfzVOlvo5pSeyff4M5uWiQiIas7kAnrHVKpKLd25jPfbeeYMq1JrkkNNTvCszt/kYgYkonNgDlfzJFhnC9280u9xJc8lCodQzTmMy68AUMiGkiw5nNayKn9L1fINLkrMNC0C87iWP9BQ7kVBC70lpacwnudTe7txHpfQD/1TJqUNuSJpVufunMXFRXS+OrGEnLHQzSgtJjKel0jWStfwXS6gNxGBiIat+l1mz9sAiF58m0sYGNM5IjCfa7iHDb5cFrplEfJlLmdiqu2wmnMZzyDEIh6mLlYUq2XgVkg56oAufINxDEhE5wwfcj33UFcGU5hb6JIlHhO4lBdSUbqW73AZQ1jNr3iQ+vxv+7JjO2+giCq6FxG6L8fQL7bCoQjM5gp+wwbXbVjo1kXLF7iE52LaZIuHZ3EBfZnDlTyYi9KiP2Pafcah7JBQfA2rgN50T+XOc7mK37HeOlvo1kfpSYzn2dTernyTSxjITMbza1aTIaKCHehG+2YQHcb2iSMs4SOyTexxnWdyFfdRb52LUXGlv4MtpQLzmMpAdspH6IDowj7U8iYfMoVV7EJvRG9eY1YbOydl+9Dtx6n5xeZF4APuZwlH8G9U5M4beIfxPFhQIDWO0K2I0q9zIX8oKB6eyWWMZAm/4BwmIkayT5t1hogqdqIqEaE/ZC4wILcmuQhM4wIepsGx2RG6fVF6OVMYwq65KJlVuoqxjGA283iPKVQwmq48w+o2Jx0DGZfqqvoXHqE3JzEWARne4qJEjzxjoduh9N/pz5j8My079/+u7EsDc5jF35hGN5Yyu43Hh0M4i9pY/+pl/CdT2Y3/yLVPTuR8nsON3Ft6onpr8cjDAblhUlFqHN+tuTVS+mlYm0bzBaEq3ZJY6keappFC/zc3Iv1pjSnnwa8eU7h1Rh72163akJgHOvuvyTpRvfJzkbbumBtHcH+QGiR7k6rVXXerSQ16XLtvdupHbxa6jUr31XWJOTQ2xen79AX1yw+hDa3Suad+nZrGYIkOF9pL76lOvy2nVVIs9D9b6R66tMiyP5L0se7Xado2r14oqnZ8X3fVCGV0gpanhL5HfYXGa7luatG0YN4QcqGwDcW3OqawmjH0SoxhEdCN3TmSA9mJVdTRSFPudxlCbMsW6qrYhi9yGNNZwwiuYpf80UTgI27gdYZwKpO4hoVuRGkplf4K2lAvvY47WM4l7J6qpwBRw0EcyFd5jwm8yRIWsZDGxBFqGcFo9uJI+nMdH1HNqRyYOsezPEugD0/yJIutcyvijb+pNkVpUcEBXMVnck0pIVFtlB2P3cR6FvE+M1lFAytZQwW96cUAdmcnelDPtfyYeo7iFkYm6p8XcTpPAl0IiR59xtV2WzWb3kG/yM1cmpzBqNieBq3R2tjPG/RT9RLaS6+kcvEN+p66pgqO3lwo/Kco3VMn6rnc4kNpiaPcwvHZLcqv49KoSOt0q4YL7awnC+q1Hy/BmrJluznlaG/qAdvxZU5mDyrJjiQJzTwKN/43w1pu4ecsYAQ/5HgyxOdfmsHZHsPtHPpfK3VgJ07hi+xCdV7e0GyRchk3cCsrGcJlnJF7xUaWcwW3uS+dhf7XKg2iku35PAdzCAOpALLzzYXE30BgOj/iv1jPCC7jVGoSEXw9t3INKx2dLfQnI/mA/uzCARzFaAYkZM3KHJjC1TxKE7twOcdRnRiJEnE3l7LE6YaF/qRInZ0qMUM/RnAEe9CXIfSmNz1y2j7PD5gAHMB1HJrrhroxEYEn+BZzrLOF/iRRSX/qWJHrv7wNI+hDH/rQlQrqmcBbVHMMlzMmNbdz4BnG8bp1ttCfLCo4ln/jLf7OHBawvuD3PTiVCxmVSDUg4iEuZaZ1LkVEMaWkiWfYg/Ppylu8xnzWsZC5LGIdEXXU8l2+k5h7SQQa+D3jmW+dHaE/mXTlDMYxMif4UhbxMfVENFDL/vRI6byKu7meBWQ8P52F/qTWd1TyZS5l73yvjjhJnRdxE7eyzNHZQn+ylc5wENfw6VxXJSVqQrJEZJjF1TzAOutsoTuC1GO5kqOpana20ncYz6OprqXGQn+ClR7CRXydPimlRSDiJb7PhHw9h7HQHULpXpzDeQXzOtfxZ67mDacaFrrjKd2Dr3Eh2+aUFoG13MnPmGWdLXTHVLqSL3AdY3Ir9y7mp/zG9RoWumNzCD9nH2AOP+Ce3OBZY6E7KBki9uFi+nIzjxA5OlvozpB6DKaWGal6aWOhO7DS5p/wMDT/HNTsaEPjCG2MI7Sx0MZYaGMstDEW2hgLbSy0MRbaGAttjIU2xkIbC22MhTbGQhtjoY2x0MZCG2OhjbHQxlhoY6GNsdDGWGhjLLQxFtpYaGMstDEW2hgLbYyFNhbaGAttjIU2xkIbY6GNhTbGQhtjoY2x0MZYaGOhjbHQxlhoYyy0MRbaWGhjLLQxFtoYC22MhTYW2hgLbYyFNsZCGwttjIU2xkIbY6GNsdDGQhtjoY2x0MZYaGMstLHQxlhoYyy0MRbaGAttLLQxFtoYC22MhTbGQhsLbYyFNsZCG2OhjbHQxkIbY6GNsdDGWGhjLLSx0MZYaGMstDEW2hgLbSy0MRbaGAttjIU2FtoYC22MhTbGQhtjoY2FNsZCG2OhjbHQxlhoY6GNsdDGWGhjLLQxFtpYaGMstDEW2hgLbYyFNhbaGAttjIU2xkIbY6GNhTbGQhtjoY2x0MZYaGOhjbHQxlhoYyy0sdD+CoyFNsZCG2OhjbHQxkIbY6GNsdDGWGhjLLSx0MZYaGMstDEW2hgLbSy0MRbaGAttjIU2xkIbC22MhTbmX8j/ByQPD8v9shqTAAAAAElFTkSuQmCC"); }
+.logo-live { position: relative; width: 420px; max-width: 82vw; margin-bottom: 48px; }
+.logo-live .hero-logo { width: 100%; max-width: none; margin-bottom: 0; display: block; }
+.logo-liquid, .logo-sheen {
+  position: absolute; inset: 0; pointer-events: none;
+  -webkit-mask: var(--logo-mask) center / 100% 100% no-repeat;
+          mask: var(--logo-mask) center / 100% 100% no-repeat;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.3s forwards;
+}
+/* 液体：濃淡のピンクがゆっくり移ろう */
+.logo-liquid {
+  background:
+    radial-gradient(circle at 30% 35%, rgba(176, 70, 112, 0.55) 0%, rgba(176, 70, 112, 0) 22%),
+    radial-gradient(circle at 70% 60%, rgba(255, 214, 226, 0.75) 0%, rgba(255, 214, 226, 0) 24%),
+    radial-gradient(circle at 45% 80%, rgba(206, 96, 138, 0.45) 0%, rgba(206, 96, 138, 0) 20%);
+  background-size: 180% 180%;
+  animation: fadeInUp 1.2s ease-out 0.3s forwards, logoLiquid 11s ease-in-out 1.5s infinite alternate;
+}
+/* 光沢：白い光の筋が通り抜ける */
+.logo-sheen {
+  background: linear-gradient(115deg, rgba(255,255,255,0) 38%, rgba(255,250,252,0.9) 48%, rgba(255,236,242,0.35) 53%, rgba(255,255,255,0) 62%);
+  background-size: 300% 300%;
+  background-position: 120% 0;
+  animation: fadeInUp 1.2s ease-out 0.3s forwards, logoSheen 7s ease-in-out 2s infinite;
+}
+@keyframes logoLiquid {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 40%; }
+  100% { background-position: 30% 100%; }
+}
+@keyframes logoSheen {
+  0%   { background-position: 120% 0; }
+  45%  { background-position: -20% 0; }
+  100% { background-position: -20% 0; }
+}
+@media (max-width: 768px) { .logo-live { width: 340px; margin-bottom: 36px; } }
+@media (prefers-reduced-motion: reduce) {
+  .logo-liquid, .logo-sheen { animation: fadeInUp 1.2s ease-out 0.3s forwards; }
+  .logo-sheen { display: none; }
+}
+
+.hero-tagline {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  letter-spacing: 0.25em;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.6s forwards;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 5.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.12em;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.9s forwards;
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--color-accent);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 2.2;
+  max-width: 480px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 1.2s forwards;
+}
+
+.hero-scroll {
+  position: relative;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 1.8s forwards;
+}
+
+.hero-scroll span {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--color-gold);
+  writing-mode: vertical-rl;
+}
+
+.hero-scroll::after {
+  content: '';
+  width: 1px;
+  height: 40px;
+  background: var(--color-gold);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+/* ── Sections Common ── */
+section {
+  padding: 100px 24px;
+}
+
+.section-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 400;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin-bottom: 56px;
+}
+
+.section-heading em {
+  font-style: normal;
+  color: var(--color-accent);
+}
+
+.section-body {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 2.4;
+  color: var(--color-text-light);
+}
+
+.section-body p + p {
+  margin-top: 2em;
+}
+
+/* ── Pain (問い) ── */
+.pain {
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.pain-questions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.pain-questions li {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 2;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(184, 160, 128, 0.2);
+}
+
+/* ── Philosophy (世界観) ── */
+.philosophy {
+  background: var(--color-bg-deep);
+}
+
+.philosophy .section-body {
+  text-align: center;
+}
+
+/* ── The 2 Rocks ── */
+.rocks {
+  background: var(--color-white);
+}
+
+/* ── River Flow ── */
+.rocks-river {
+  position: relative;
+  margin-top: 64px;
+  padding: 40px 0;
+}
+
+.rocks-river::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--color-accent-soft) 10%,
+    var(--color-accent-pale) 35%,
+    transparent 40%,
+    transparent 60%,
+    var(--color-accent-pale) 65%,
+    var(--color-accent-soft) 90%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+.rocks-flow-label {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--color-accent-soft);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.rocks-flow-label span {
+  background: var(--color-white);
+  padding: 0 16px;
+  position: relative;
+}
+
+/* ── Rock Cards ── */
+.rocks-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.rock-card {
+  position: relative;
+  text-align: center;
+  padding: 48px 36px 44px;
+  max-width: 460px;
+  width: 100%;
+  z-index: 2;
+}
+
+.rock-boulder {
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin: 0 auto 28px;
+}
+
+.rock-boulder-shape {
+  width: 100%;
+  height: 100%;
+  border-radius: 42% 56% 48% 52% / 48% 44% 56% 52%;
+  background: radial-gradient(ellipse at 35% 30%, #6b6058, #4a413a 40%, #332c27 80%, #2c2420);
+  box-shadow:
+    0 8px 32px rgba(44, 36, 32, 0.25),
+    0 2px 8px rgba(44, 36, 32, 0.15),
+    inset 0 -4px 12px rgba(0, 0, 0, 0.2);
+  animation: rockBreathe 6s ease-in-out infinite;
+}
+
+.rock-card:nth-child(2) .rock-boulder-shape {
+  border-radius: 52% 44% 56% 48% / 54% 48% 50% 46%;
+  animation-delay: -3s;
+}
+
+.rock-boulder-crack {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, transparent 40%, rgba(107, 94, 84, 0.3) 50%, transparent 60%);
+  pointer-events: none;
+}
+
+.rock-boulder-shadow {
+  position: absolute;
+  bottom: -8px;
+  left: 10%;
+  width: 80%;
+  height: 16px;
+  background: radial-gradient(ellipse, rgba(44, 36, 32, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.rock-element {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+  padding: 4px 14px;
+  border: 1px solid rgba(184, 160, 128, 0.3);
+  border-radius: 1px;
+}
+
+.rock-card h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.rock-card p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 2.2;
+}
+
+/* ── Blocked indicator ── */
+.rocks-blocked {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.rocks-blocked-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: rgba(107, 94, 84, 0.3);
+  font-size: 0.7rem;
+  letter-spacing: 0.5em;
+}
+
+.rocks-blocked-line::before,
+.rocks-blocked-line::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: rgba(107, 94, 84, 0.2);
+}
+
+/* ── Resolution ── */
+.rocks-resolution {
+  text-align: center;
+  margin-top: 56px;
+  padding: 48px 24px;
+  position: relative;
+}
+
+.rocks-resolution::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, var(--color-accent-soft));
+}
+
+.rocks-resolution p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  line-height: 2.4;
+}
+
+@keyframes rockBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+}
+
+/* ── Loss Process (消滅プロセス) ── */
+.process {
+  background: var(--color-bg);
+}
+
+.process-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 8px;
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 18px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--color-accent-pale) 10%, var(--color-accent-soft) 50%, rgba(107, 94, 84, 0.3) 85%, transparent);
+}
+
+.process-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(184, 160, 128, 0.12);
+  position: relative;
+}
+
+.process-steps li:last-child {
+  border-bottom: none;
+}
+
+.process-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-bg-deep);
+  border: 1px solid rgba(184, 160, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: var(--color-gold);
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.process-steps li.process-final .process-number {
+  background: var(--color-accent-pale);
+  border-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.process-content h4 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.process-steps li.process-final .process-content h4 {
+  color: var(--color-accent);
+}
+
+.process-content p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 2.2;
+}
+
+/* ── Method (メソッド) ── */
+.method {
+  background: var(--color-bg-deep);
+}
+
+.method-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 48px;
+}
+
+.method-list li {
+  position: relative;
+  padding: 32px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 2;
+  border-bottom: 1px solid rgba(184, 160, 128, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.method-list li:last-child {
+  border-bottom: none;
+}
+
+.method-step-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+}
+
+.method-step-num {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  font-size: 2rem;
+  font-weight: 200;
+  color: rgba(184, 160, 128, 0.15);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* ── Being (千神弥生) ── */
+.being {
+  background: var(--color-white);
+}
+
+.being-profile-photo {
+  text-align: center;
+  margin: 48px 0;
+}
+
+.being-profile-photo img {
+  width: min(280px, 60%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.being-quote {
+  position: relative;
+  padding: 48px 32px;
+  margin-top: 48px;
+  background: linear-gradient(135deg, rgba(212, 135, 156, 0.05), rgba(184, 160, 128, 0.05));
+  border-left: 2px solid var(--color-accent-soft);
+}
+
+.being-quote p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 2.6;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.being-quote cite {
+  display: block;
+  margin-top: 24px;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+}
+
+/* ── Meaning (The Grace Project) ── */
+.meaning {
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.meaning-vision {
+  font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+  font-weight: 300;
+  line-height: 2.4;
+  color: var(--color-text);
+  margin-top: 48px;
+  letter-spacing: 0.08em;
+}
+
+.meaning-vision em {
+  font-style: normal;
+  color: var(--color-accent);
+}
+
+/* ── CTA ── */
+.cta {
+  background: linear-gradient(170deg, #2c2420 0%, #3a312a 100%);
+  padding: 100px 24px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.cta .section-label {
+  color: var(--color-gold-light);
+}
+
+.cta-heading {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+  color: var(--color-white);
+}
+
+.cta-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 253, 251, 0.6);
+  line-height: 2.2;
+  max-width: 480px;
+  margin: 0 auto 48px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 56px;
+  background: #06C755;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  background: #05b04c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(6, 199, 85, 0.3);
+}
+
+.cta-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.cta-note {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: rgba(255, 253, 251, 0.4);
+  letter-spacing: 0.1em;
+}
+
+/* ── Closing Narrative ── */
+.narrative {
+  background: var(--color-bg-deep);
+  text-align: center;
+  padding: 120px 24px;
+}
+
+.narrative-text {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 2.8;
+  color: var(--color-text-light);
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--color-bg);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 200px;
+  max-width: 50vw;
+  height: auto;
+  margin-bottom: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f9f5f0, #f0e8df);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+footer small {
+  font-size: 0.7rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.15em;
+}
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  section {
+    padding: 80px 20px;
+  }
+
+  .hero {
+    padding: 48px 20px;
+  }
+
+  .hero-logo {
+    width: 340px;
+    margin-bottom: 36px;
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .being-quote {
+    padding: 32px 20px;
+  }
+
+  .cta-button {
+    padding: 18px 40px;
+    font-size: 0.95rem;
+  }
+
+  .rock-card {
+    padding: 32px 20px;
+  }
+
+  .rock-boulder {
+    width: 110px;
+    height: 96px;
+  }
+}
+
+/* ── Mother Code Concepts ── */
+.mother-code-concepts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 48px;
+}
+
+.concept-card {
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(184, 160, 128, 0.15);
+  text-align: center;
+}
+
+.concept-card:last-child {
+  border-bottom: none;
+}
+
+.concept-element {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 28px;
+}
+
+/* 岩 */
+.concept-rock {
+  width: 100%;
+  height: 85%;
+  border-radius: 44% 56% 50% 52% / 50% 46% 58% 48%;
+  background: radial-gradient(ellipse at 32% 28%, #7a706a, #534a44 40%, #3a312c 75%, #2c2520);
+  box-shadow:
+    0 10px 28px rgba(44, 36, 32, 0.3),
+    inset 0 -5px 14px rgba(0, 0, 0, 0.25),
+    inset 2px 3px 8px rgba(140, 120, 110, 0.15);
+}
+.concept-rock::after {
+  content: '';
+  position: absolute;
+  top: 28%;
+  left: 22%;
+  width: 52%;
+  height: 34%;
+  background: linear-gradient(135deg, rgba(160,140,128,0.18) 0%, transparent 55%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.concept-rock-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  width: 84%;
+  height: 14px;
+  background: radial-gradient(ellipse, rgba(44,36,32,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* 火・水（光の糸の画像） */
+.concept-img { display: block; width: 130px; height: 130px; margin: 0 -10px; transform: translateY(0px); }
+.concept-fire .concept-img { width: 160px; height: 160px; margin: 0 -25px; transform: translateY(-37px); }
+.concept-water .concept-img { width: 160px; height: 160px; margin: 0 -25px; transform: translateY(-19px); }
+.mother-code-concepts .concept-card:first-child .concept-element { margin-bottom: 38px; }
+
+/* 火（旧・未使用） */
+.concept-fire-shape {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 88px;
+  background: radial-gradient(ellipse at 50% 90%, #ff8c00 0%, #e84000 30%, #c42000 60%, #7a0e00 100%);
+  clip-path: polygon(50% 0%, 70% 20%, 88% 45%, 92% 68%, 80% 88%, 60% 100%, 40% 100%, 20% 88%, 8% 68%, 12% 45%, 30% 20%);
+  filter: drop-shadow(0 2px 10px rgba(255, 100, 0, 0.5)) drop-shadow(0 0 20px rgba(255, 60, 0, 0.3));
+}
+.concept-fire-inner {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 56px;
+  background: radial-gradient(ellipse at 50% 90%, #fff176 0%, #ffcc00 30%, #ff8c00 65%, transparent 90%);
+  clip-path: polygon(50% 0%, 72% 28%, 85% 55%, 75% 80%, 50% 100%, 25% 80%, 15% 55%, 28% 28%);
+  opacity: 0.9;
+}
+.concept-fire-tip {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 28px;
+  background: radial-gradient(ellipse at 50% 80%, #ffffff 0%, #fff9c4 40%, transparent 80%);
+  clip-path: polygon(50% 0%, 80% 50%, 65% 100%, 35% 100%, 20% 50%);
+  opacity: 0.75;
+}
+
+/* 水 */
+.concept-water-shape {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 88px;
+  background: radial-gradient(ellipse at 40% 30%, #a8d8f0 0%, #4aa8d8 30%, #1a78b4 65%, #0a4a80 100%);
+  clip-path: path('M 34 0 C 34 0 4 38 4 58 C 4 76 18 84 34 84 C 50 84 64 76 64 58 C 64 38 34 0 34 0 Z');
+  filter: drop-shadow(0 4px 12px rgba(30, 120, 200, 0.4));
+}
+.concept-water-highlight {
+  position: absolute;
+  top: 30%;
+  left: 28%;
+  width: 26%;
+  height: 18%;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.6) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+
+.concept-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.concept-card p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 2.4;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Decorative Circles ── */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Project（プロジェクトへの入口）── */
+.project { background: var(--color-bg-deep); text-align: center; }
+.project-card {
+  display: block; max-width: 520px; margin: 0 auto; padding: 44px 32px 40px;
+  background: linear-gradient(170deg, #161b33 0%, #222a4d 100%);
+  color: #f4f2ee; text-decoration: none; border-radius: 2px;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.project-card:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(22,27,51,0.25); }
+.project-no { font-size: 0.72rem; letter-spacing: 0.3em; color: var(--color-gold-light); }
+.project-title { font-size: 1.4rem; font-weight: 500; letter-spacing: 0.15em; margin: 10px 0 6px; }
+.project-course { font-size: 0.9rem; color: rgba(244,242,238,0.72); }
+.project-more { display: inline-block; margin-top: 24px; font-size: 0.85rem; letter-spacing: 0.1em; color: var(--color-gold-light); border-bottom: 1px solid rgba(205,191,160,0.5); padding-bottom: 2px; }
+
+/* ── Image art（光の糸）── */
+.art { display: block; height: auto; pointer-events: none; }
+.art-infinity { width: min(860px, 100vw - 40px); margin: 32px auto 72px; position: relative; left: 50%; transform: translateX(-50%); }
+@media (max-width: 600px) { .art-infinity { width: calc(100vw - 8px); margin: 16px auto 48px; } }
+.section-heading { word-break: auto-phrase; text-wrap: balance; }
+/* 光の糸（動く版）：動けるときは canvas、止めるときは静止画 */
+.art-live { position: relative; }
+.art-live canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: none; }
+.art-live.is-live canvas { display: block; }
+.art-live.is-live img { visibility: hidden; }
+.art-infinity.art-live canvas { top: -22%; bottom: auto; height: 144%; }
+
+.art-bleed { width: 100vw; max-width: none; margin-left: calc(50% - 50vw); }
+.art-fire-sea { margin-top: 40px; margin-bottom: -24px; }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════ -->
+<section class="hero">
+  <div class="logo-live">
+    <img src="assets/img/logo.png" alt="千神流 赦す技術" class="hero-logo">
+    <span class="logo-liquid" aria-hidden="true"></span>
+    <span class="logo-sheen" aria-hidden="true"></span>
+  </div>
+  <p class="hero-tagline"><span class="nw">YAYOI CHIKAMI</span> ── <span class="nw">The Art of Forgiveness</span></p>
+  <h1 class="hero-title">
+    <em>赦せない</em>痛みが、<br>
+    <span class="nw">あなたの愛を</span><span class="nw">止めている。</span>
+  </h1>
+  <p class="hero-sub">
+    「赦せない」苦しみが溶け、<br>
+    止まっていた愛と人生を巡らせる<br>
+    もう誰も何も責めず、<br>
+    安心して生きていける
+  </p>
+  <div class="hero-scroll">
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PAIN ── 問いかけ
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="pain">
+  <div class="section-inner reveal">
+    <span class="section-label">Question</span>
+    <h2 class="section-heading">
+      こんな想いを、<br>抱えていませんか
+    </h2>
+    <ul class="pain-questions">
+      <li>ずっと過去や誰か、自分を責めて、苦しい</li>
+      <li>良い母親になれない、母親失格だと突きつけられる</li>
+      <li>怒ってしまう自分を責めたり、未熟だと感じる</li>
+      <li>私ばっかり頑張っている気がする</li>
+      <li>過去の傷が、今の人間関係に影を落としている</li>
+      <li>大切な人であるはずなのに、愛し方がわからなくなっている</li>
+      <li>大好きな人から愛されたいのに、愛されない</li>
+      <li>消えてしまいたい、生きる意味が分からない</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PHILOSOPHY ── 世界観
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="philosophy">
+  <div class="section-inner reveal">
+    <span class="section-label">Philosophy</span>
+    <h2 class="section-heading">
+      すべての苦しみは、<br>
+      ３つの「<em>赦せない</em>」から生まれる
+    </h2>
+    <div class="section-body">
+      <p>
+        あなたという存在は、愛そのものです。<br>
+        そして、愛とは、あなたの生命の流れそのものです。<br>
+        だから、あなたのなかから湧きあがってくる怒りも、喜びも、悲しみも──<br>
+        すべては同じひとつの愛＝生命エネルギーの流れ、なのです。
+      </p>
+      <p>
+        過去を赦せない。自分自身を赦せない。あの人を赦せない。<br>
+        この3つの「赦せない」が愛の流れをせき止める岩となって、<br>
+        生命エネルギーを圧迫し、愛・体調・精神・人生を詰まらせ続けています。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     LOSS PROCESS ── 消滅プロセス
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="process">
+  <div class="section-inner reveal">
+    <span class="section-label">The Loss</span>
+    <h2 class="section-heading">
+      こうして、愛や幸せが、<br>
+      あなたの<em>存在ごと消えていく</em>
+    </h2>
+    <div class="section-body" style="text-align: center; margin-bottom: 48px;">
+      <p>
+        感情が動くこと自体、とても自然なことです。<br>
+        けれど社会は言います「怒ってはいけない」と。<br>
+        そのときから、静かに生命エネルギーは止まり始めます。
+      </p>
+    </div>
+    <ol class="process-steps">
+      <li>
+        <span class="process-number">01</span>
+        <div class="process-content">
+          <h4>愛＝生命エネルギーは、最初からあなたの中にある</h4>
+          <p>喜びも、悲しみも、怒りも──<br>あらゆる感情は、すべて自然な生命エネルギーです。<br>それらは本来、内側から湧き、外へ流れ、巡っていくものです。</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-number">02</span>
+        <div class="process-content">
+          <h4>３つの「赦せない」が、愛の生命エネルギーを止める</h4>
+          <p>過去への「赦せない」、自分自身への「赦せない」、他人への「赦せない」。<br>この3つの「赦せない」が、<br>本来自然に流れるべき愛の生命エネルギーをせき止めます。</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-number">03</span>
+        <div class="process-content">
+          <h4>流れが止まると、エネルギーは内側に滞る</h4>
+          <p>本来流れて解放されるはずだったエネルギーは、<br>外に出ることができず、内側にとどまります。<br>そのとき、それを私たちは「怒り」として感じます。</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-number">04</span>
+        <div class="process-content">
+          <h4>怒りはダメではなく、流れを再び動かそうとする衝動</h4>
+          <p>怒りは止まっている生命エネルギーに触れたときに起きる衝動であり、<br>流れを動かそうと内側から沸き起こる力です。<br>「赦せない」がある場所を教えてくれる重要なサインなのです。</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-number">05</span>
+        <div class="process-content">
+          <h4>止められた生命エネルギーが、心身を圧迫する</h4>
+          <p>３つの「赦せない」に加えて、怒りを抑えることでさらに<br>行き場を失った生命エネルギーは、身体の中に溜まり続けます。<br>それはやがて、心の重さや身体の不調など生きづらさとなって現れます。</p>
+        </div>
+      </li>
+      <li class="process-final">
+        <span class="process-number">06</span>
+        <div class="process-content">
+          <h4>本来の自分が、置き去りになっていく</h4>
+          <p>「赦せない」と「怒り」が解放されない状態が続くと、<br>愛の生命エネルギーが巡っている本来のあなたがどんどん小さくなり、<br>やがて、消えたい感覚や生きる意味の喪失感が強くなります。</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MOTHER CODE
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="rocks">
+  <div class="section-inner reveal">
+    <span class="section-label">Mother Code</span>
+    <h2 class="section-heading">
+      愛と生命が<em>循環する世界</em>へ戻る
+    </h2>
+    <div class="art-live art-infinity" data-kind="infinity"><img src="assets/img/art-infinity.webp" alt="" class="art" width="1200" height="379" loading="lazy" style="width:100%"><canvas aria-hidden="true"></canvas></div>
+    <div class="section-body" style="text-align: center; margin-bottom: 0;">
+      <p>
+        Mother Codeとは、<br>
+        火のように生まれ、水のように流れ、安心へと還る<br>
+        女性の内側に最初から備わっている愛と生命の循環の設計図です。
+      </p>
+    </div>
+
+    <div class="mother-code-concepts">
+      <div class="concept-card">
+        <div class="concept-element">
+          <div class="concept-rock"></div>
+          <div class="concept-rock-shadow"></div>
+        </div>
+        <h3 class="concept-label">「赦せない」</h3>
+        <p>
+          過去を赦せない。自分自身を赦せない。あの人を赦せない。<br>
+          この3つの「赦せない」が、<br>
+          本来流れるはずの生命エネルギーをせき止め、<br>
+          愛の流れを止めてしまいます。
+        </p>
+      </div>
+
+      <div class="concept-card concept-fire">
+        <div class="concept-element">
+          <img src="assets/img/icon-fire.webp" alt="火" class="concept-img" width="330" height="330" loading="lazy">
+        </div>
+        <h3 class="concept-label">生命エネルギーの衝動</h3>
+        <p>
+          怒りとは、内側から湧きあがるマグマのような<br>
+          生命エネルギーの衝動です。<br>
+          怒りを抑えたとき、そのエネルギーは解放されず行き場を失い、<br>
+          内側にとどまり続け、心身を傷つけていきます。
+        </p>
+      </div>
+
+      <div class="concept-card concept-water">
+        <div class="concept-element">
+          <img src="assets/img/icon-water.webp" alt="水" class="concept-img" width="330" height="330" loading="lazy">
+        </div>
+        <h3 class="concept-label">生命エネルギーの循環</h3>
+        <p>
+          生命エネルギーは本来、火として生まれ、<br>
+          水として流れ、やがて安心という海へと辿り着きます。<br>
+          その流れが止められると、愛も生命も、人生も巡るも滞ります。<br>
+          すべての生命は、海に還る安心のもと、循環しているのです。
+        </p>
+      </div>
+    </div>
+
+    <div class="art-live art-bleed art-fire-sea" data-kind="firesea"><img src="assets/img/art-fire-sea.webp" alt="" class="art" width="1600" height="420" loading="lazy" style="width:100%"><canvas aria-hidden="true"></canvas></div>
+    <div class="rocks-resolution">
+      <p>
+        千神流「赦す技術」は、岩を溶かし、止まっていた<br>
+        愛と生命エネルギーの循環（Mother Code）を呼び戻す。<br>
+        火は再び動き、水は再び巡り、<br>
+        あなたは本来の安心へと還っていく。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     METHOD
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="method">
+  <div class="section-inner reveal">
+    <span class="section-label">Method ── Recovery Process</span>
+    <h2 class="section-heading">
+      赦す技術：岩を溶かし、<br>
+      <em>愛の循環を回復する</em>5ステップ
+    </h2>
+    <div class="section-body">
+      <p>
+        Mother Code──宇宙的な母性の源流を知る伝道者・千神弥生が導く、<br>
+        愛の循環を取り戻すための5つのプロセスです。
+      </p>
+    </div>
+    <ul class="method-list">
+      <li>
+        <span class="method-step-num">01</span>
+        <span class="method-step-label">診断 ── 自己共感と整理</span>
+        流れが止まっている場所・理由・構造を診断、言語化されることで、現状の行き詰まりを自分自身で共感でき、整理できることで、暗闇に希望の光が差し込む。
+      </li>
+      <li>
+        <span class="method-step-num">02</span>
+        <span class="method-step-label">ストーリー化 ── 人生への納得</span>
+        人生で起こった出来事や感情の点と点をつなげられることで、自分だけの物語として深い納得感が生まれ、「赦せない」大きな岩が溶ける。
+      </li>
+      <li>
+        <span class="method-step-num">03</span>
+        <span class="method-step-label">視座の転換 ── 世界の拡張</span>
+        被害者の立場から創造者へと、世界の見え方が180度変わる視座に移動することで、暗くて狭い終わりのない苦しい場所から、明るく軽く広い世界へと脱出する。
+      </li>
+      <li>
+        <span class="method-step-num">04</span>
+        <span class="method-step-label">分離自己の回収 ── 過去と怒りの解放</span>
+        あちこちに分離した過去の自分を回収し、抑えてきた怒りを解放することで、無意識に流れ出ていた生命エネルギーを止める。
+      </li>
+      <li>
+        <span class="method-step-num">05</span>
+        <span class="method-step-label">愛の循環回復 ── 岩の消滅</span>
+        3つの「赦せない」岩が溶かされ、愛＝生命エネルギーの循環がよみがえり、安心・安定へと還る。
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     BEING ── 千神弥生
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="being">
+  <div class="section-inner reveal">
+    <span class="section-label">Being</span>
+    <h2 class="section-heading">
+      光と影を見つめ、<br>
+      祈りと言葉で<em>場を包む</em>人
+    </h2>
+    <div class="being-profile-photo">
+      <img src="assets/img/chigami-yayoi-profile.jpg" alt="千神弥生 プロフィール写真">
+    </div>
+    <div class="section-body">
+      <p>
+        千神弥生は、Mother Code──宇宙的な母性の体現者です。
+      </p>
+      <p>
+        母性と祈りによって、赦しの言葉と光を降ろし、<br>
+        罪と闇から人を解放する存在。<br>
+        傷ついた人と同じ景色を見ることで「場」を癒し、<br>
+        決して見捨てず安心して生きられる未来に導きます。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MEANING ── The Grace Project
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="meaning">
+  <div class="section-inner reveal">
+    <span class="section-label">Meaning ── The Grace Project</span>
+    <h2 class="section-heading">
+      子どもと女性が<br>安心して<em>生きられる世界</em>を祈る<br>
+      The Grace Project
+    </h2>
+    <p class="meaning-vision">
+      千神弥生が見つめる先にあるのは、<br>
+      母親が自分を責めなくていい世界。<br>
+      子どもたちが安心して、自由に生きられる世界。<br><br>
+      母が赦しの場となるとき、<br>
+      家庭は世界の平和の最前線になる。<br><br>
+      それが、<em>The Grace Project</em>。
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROJECT ── テーマ別プロジェクトへの入口
+     ════════════════════════════════════════ -->
+<div class="section-spacer"></div>
+<section class="project">
+  <div class="section-inner reveal">
+    <span class="section-label">Project</span>
+    <h2 class="section-heading">
+      赦す技術で、<br>
+      <em>あの人を赦す</em>
+    </h2>
+    <a href="karma/index.html" class="project-card">
+      <span class="project-no">PROJECT 01</span>
+      <p class="project-title">男性を赦す</p>
+      <p class="project-course">女のカルマ浄化講座 ── 3ヶ月</p>
+      <span class="project-more">女カルマタイプ診断はこちら</span>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA ── LINE登録
+     ════════════════════════════════════════ -->
+<section class="cta">
+  <div class="section-inner reveal">
+    <span class="section-label">Invitation</span>
+    <h2 class="cta-heading">
+      赦しの旅は、<br>ここから始まります。
+    </h2>
+    <p class="cta-sub">
+      公式LINEでは、千神弥生からの<br>
+      赦しと祈りにまつわるメッセージを<br>
+      お届けしています。
+    </p>
+    <a href="#" class="cta-button" id="line-cta">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINE登録する
+    </a>
+    <p class="cta-note">無料でご登録いただけます</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════ -->
+<footer>
+  <img src="assets/img/logo.png" alt="千神流 赦す技術" class="footer-logo">
+  <br>
+  <small>&copy; Yayoi Chikami ── 千神流 赦す技術</small>
+</footer>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════ -->
+<script>
+// Scroll Reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.15,
+  rootMargin: '0px 0px -40px 0px'
+});
+reveals.forEach(el => observer.observe(el));
+</script>
+
+<script src="assets/js/threads.js" defer></script>
+</body>
+</html>

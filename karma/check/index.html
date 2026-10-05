@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="indigo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>女カルマタイプ診断（無料） | 千神弥生</title>
+<meta name="description" content="20の問いに答えるだけで、あなたの中で強く出ている女カルマのタイプがわかります。無料・約3分。">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/brand.css">
+<style>
+body { background: var(--bg-deep); }
+.wrap { max-width: 600px; margin: 0 auto; padding: 0 20px 80px; }
+
+.top { text-align: center; padding: 56px 0 36px; }
+.top .label { margin-bottom: 12px; }
+.top h1 { font-size: clamp(1.35rem, 4.6vw, 1.8rem); font-weight: 400; letter-spacing: 0.1em; line-height: 1.8; }
+.top p { margin-top: 12px; font-size: 0.9rem; color: var(--text-light); line-height: 2; }
+
+.card { background: var(--white); border-radius: 4px; padding: 36px 28px 32px; box-shadow: 0 2px 24px rgba(27, 29, 42, 0.06); }
+
+/* Intro */
+.intro .body { font-size: 0.95rem; }
+.intro .btn { margin-top: 32px; }
+.fine { margin-top: 24px; font-family: var(--font-sans); font-size: 0.72rem; line-height: 1.9; color: var(--text-light); }
+
+/* Quiz */
+.prog-meta { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-sans); font-size: 0.78rem; color: var(--text-light); margin-bottom: 10px; }
+.prog { height: 3px; background: var(--accent-pale); border-radius: 2px; overflow: hidden; margin-bottom: 36px; }
+.prog-fill { height: 100%; width: 0; background: var(--accent); transition: width .35s ease; }
+.q-text { font-size: 1.15rem; line-height: 2; letter-spacing: 0.05em; min-height: 4.2em; margin-bottom: 28px; }
+.opts { display: flex; flex-direction: column; gap: 10px; }
+.opt { width: 100%; text-align: left; padding: 15px 18px; font-family: var(--font-sans); font-size: 0.95rem; color: var(--text); background: var(--bg); border: 1px solid transparent; border-radius: 3px; cursor: pointer; transition: background .2s, border-color .2s; display: flex; align-items: center; gap: 12px; }
+.opt::before { content: ''; flex-shrink: 0; width: 16px; height: 16px; border-radius: 50%; border: 1px solid var(--accent-soft); background: var(--white); }
+.opt:hover { border-color: var(--accent-soft); }
+.opt.sel { background: var(--accent-pale); border-color: var(--accent); }
+.opt.sel::before { background: var(--accent); box-shadow: inset 0 0 0 3px var(--white); border-color: var(--accent); }
+.back { background: none; border: none; font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-light); cursor: pointer; padding: 4px 0; }
+.back[hidden] { display: none; }
+
+/* Result */
+.res-head { text-align: center; margin-bottom: 8px; }
+.res-kicker { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.1em; color: var(--text-light); }
+.res-type { font-size: 2rem; letter-spacing: 0.25em; margin: 6px 0 4px; }
+.res-tag { font-size: 0.95rem; color: var(--text-light); word-break: auto-phrase; text-wrap: balance; }
+.radar { display: block; width: 100%; max-width: 320px; margin: 20px auto 8px; overflow: visible; }
+.bars { margin: 12px 0 8px; }
+.bar { display: grid; grid-template-columns: 2.6em 1fr 4.2em; align-items: center; gap: 10px; margin: 8px 0; font-family: var(--font-sans); font-size: 0.85rem; }
+.bar-bg { height: 8px; background: var(--bg-deep); border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; width: 0; border-radius: 4px; transition: width .8s ease; }
+.bar-score { white-space: nowrap; text-align: right; color: var(--text-light); font-variant-numeric: tabular-nums; }
+
+.res-lead { margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--bg-deep); font-size: 0.98rem; line-height: 2.2; color: var(--text-light); }
+.res-lead strong { color: var(--text); font-weight: 600; }
+
+.line-box { margin-top: 28px; padding: 28px 20px; text-align: center; background: var(--bg); border-radius: 4px; }
+.line-box h2 { word-break: auto-phrase; text-wrap: balance; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.06em; line-height: 1.9; margin-bottom: 16px; }
+.steps { list-style: none; counter-reset: s; text-align: left; max-width: 380px; margin: 0 auto 24px; font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.9; color: var(--text-light); }
+.steps li { counter-increment: s; display: flex; gap: 10px; margin: 8px 0; }
+.steps li::before { content: counter(s); flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 0.72rem; display: flex; align-items: center; justify-content: center; margin-top: 3px; }
+.kw { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; }
+.kw code { font-family: var(--font-serif); font-size: 1rem; padding: 3px 12px; background: var(--white); border: 1px solid var(--accent-soft); border-radius: 3px; color: var(--accent); }
+.copy { font-family: var(--font-sans); font-size: 0.72rem; padding: 4px 10px; border: 1px solid var(--accent-soft); background: var(--white); color: var(--accent); border-radius: 3px; cursor: pointer; }
+.line-box .btn-note { opacity: 0.8; }
+
+.after { margin-top: 28px; text-align: center; font-family: var(--font-sans); font-size: 0.8rem; }
+.after button, .after a { background: none; border: none; color: var(--text-light); text-decoration: underline; cursor: pointer; font: inherit; margin: 0 10px; }
+
+[hidden] { display: none !important; }
+@media (max-width: 480px) { .card { padding: 28px 20px 26px; } }
+</style>
+<script src="../karma.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <span class="label">Diagnosis</span>
+    <h1>女カルマタイプ診断</h1>
+    <p>聖女・乙女・巫女・烈女<br>あなたの中で、強く出ているのはどれ？</p>
+  </div>
+
+  <!-- ===== Intro ===== -->
+  <section class="card intro" id="intro">
+    <div class="body">
+      <p>20の問いに、いまの気持ちに近いものを選んでください。正しい答えも、良い答えもありません。</p>
+      <p>ふだんの関係を思い浮かべて、深く考えすぎずに答えるのがコツです。</p>
+    </div>
+    <p class="center"><button class="btn btn--gold" id="start">診断をはじめる</button></p>
+    <p class="fine">この診断は、ご自身を見つめるためのセルフチェックです。医学的・心理学的な診断ではありません。回答内容はこの端末の中だけで集計され、保存・送信されません。</p>
+  </section>
+
+  <!-- ===== Quiz ===== -->
+  <section class="card" id="quiz" hidden>
+    <div class="prog-meta"><button class="back" id="back" hidden>← ひとつ戻る</button><span id="count"></span></div>
+    <div class="prog"><div class="prog-fill" id="progFill"></div></div>
+    <p class="q-text" id="qText"></p>
+    <div class="opts" id="opts" role="radiogroup" aria-labelledby="qText"></div>
+  </section>
+
+  <!-- ===== Result ===== -->
+  <section class="card" id="result" hidden>
+    <div class="res-head">
+      <p class="res-kicker" id="resKicker">あなたの中で、いちばん強く出ているのは</p>
+      <p class="res-type" id="resType"></p>
+      <p class="res-tag" id="resTag"></p>
+    </div>
+
+    <svg class="radar" id="radar" viewBox="-40 -30 380 360" role="img" aria-label="4つのタイプのバランス"></svg>
+    <div class="bars" id="bars"></div>
+
+    <p class="res-lead" id="resLead"></p>
+
+    <div class="line-box">
+      <h2>このタイプの「光と影」と<br>浄化のヒントを、<br>LINEでお届けします</h2>
+      <ol class="steps">
+        <li>下のボタンから、千神弥生のLINEを友だち追加</li>
+        <li><span>トークで、タイプ名を送る<br><span class="kw" id="kwWrap"></span></span></li>
+        <li>タイプ別の詳しい解説が届きます</li>
+      </ol>
+      <a href="#" class="btn btn--line" id="lineBtn">LINEで解説を受け取る</a>
+      <p class="btn-note">無料・いつでも解除できます</p>
+    </div>
+
+    <div class="after">
+      <button id="retry">もう一度診断する</button><a href="../index.html">講座について読む</a>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer" style="background: transparent;">
+  <nav><a href="../../index.html">千神流「赦す技術」</a><a href="../../privacy/index.html">プライバシーポリシー</a></nav>
+  <small>&copy; Yayoi Chikami ── 千神流 赦す技術</small>
+</footer>
+
+<script>
+(function () {
+  /* ---------- タイプ定義 ---------- */
+  var TYPES = {
+    seijo:  { name: '聖女', color: 'var(--type-seijo)',  hex: '#4f4aa8', tag: '捧げることで、存在を証明しようとしてきた',
+              lead: '誰かのために尽くし、正しくあろうとしてきたあなた。その優しさの奥で、<strong>自分の気持ちを後回しにする癖</strong>が、愛の流れを止めているのかもしれません。' },
+    otome:  { name: '乙女', color: 'var(--type-otome)',  hex: '#9b3a5c', tag: '愛されることで、存在を証明しようとしてきた',
+              lead: '愛されることで、自分の価値を確かめようとしてきたあなた。あの人の反応ひとつで揺れてしまうのは、<strong>愛されなければ価値がない</strong>という思い込みを受け継いできたからかもしれません。' },
+    miko:   { name: '巫女', color: 'var(--type-miko)',   hex: '#1f6e5a', tag: '感じ取ることで、存在を証明しようとしてきた',
+              lead: '人の気持ちや場の空気を、誰よりも感じ取ってきたあなた。受け取りすぎるうちに、<strong>自分がどこにいるのかわからなくなる</strong>ことがあるかもしれません。' },
+    ressho: { name: '烈女', color: 'var(--type-ressho)', hex: '#9a4a24', tag: '強さで、存在を証明しようとしてきた',
+              lead: '弱さを見せず、ひとりで抱えて戦ってきたあなた。その鎧の下には、<strong>本当は誰かに頼りたいわたし</strong>が、ずっと待っているのかもしれません。' }
+  };
+  var ORDER = ['seijo', 'otome', 'miko', 'ressho'];
+
+  /* ---------- 設問（各タイプ5問・交互に並べる） ---------- */
+  var Q = [
+    ['seijo',  '誰かに迷惑をかけてしまったとき、ずっと気にしてしまう'],
+    ['otome',  '人から愛されるために、自分を抑えてしまうことが多い'],
+    ['miko',   '夫や恋人の気持ちを先読みして、合わせようとする'],
+    ['ressho', '弱みを見せるのが苦手で、いつも強くいなければと思う'],
+    ['seijo',  '「私さえ我慢すれば」と、自分の気持ちを後回しにする'],
+    ['otome',  '愛されているか不安になり、確かめたくなることがある'],
+    ['miko',   '人の感情や場の空気をすぐに察知して、消耗することがある'],
+    ['ressho', '何でも自分でやらなければと感じ、人に頼れない'],
+    ['seijo',  '「正しくあらねば」という気持ちが強く、自分を裁いてしまう'],
+    ['otome',  '好きな人からの反応がないと、自分の価値がないように感じる'],
+    ['miko',   '他人の気持ちで頭がいっぱいになり、自分の気持ちがわからなくなる'],
+    ['ressho', '怒りや悲しみを出すことに罪悪感があり、抑えてしまう'],
+    ['seijo',  '自分が幸せになることに、申し訳なさを感じることがある'],
+    ['otome',  '「可愛くいなければ」「好かれなければ」と意識してしまう'],
+    ['miko',   'つらいことがあっても楽観的に考えようとして、あとで落ち込む'],
+    ['ressho', '疲れていても「大丈夫」と言ってしまい、本音を言えない'],
+    ['seijo',  '知識や正しさで、自分を守ろうとすることがある'],
+    ['otome',  '嫉妬する自分に気づき、そんな自分が嫌になることがある'],
+    ['miko',   'ひとりでいると不安になり、誰かとつながっていたくなる'],
+    ['ressho', '本当は甘えたいのに、それを見せることができない']
+  ];
+  var OPTS = ['まったくない', 'あまりない', 'どちらともいえない', 'ときどきある', 'よくある'];
+  var MAX = 20; // 5問 × 4点
+
+  var answers = new Array(Q.length);
+  var idx = 0, started = false, locked = false;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function show(id) { ['intro', 'quiz', 'result'].forEach(function (s) { $(s).hidden = (s !== id); }); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+  function render() {
+    $('count').textContent = (idx + 1) + ' / ' + Q.length;
+    $('progFill').style.width = (idx / Q.length * 100) + '%';
+    $('back').hidden = idx === 0;
+    $('qText').textContent = Q[idx][1];
+    var box = $('opts'); box.innerHTML = '';
+    OPTS.forEach(function (label, v) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'opt' + (answers[idx] === v ? ' sel' : '');
+      b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', answers[idx] === v ? 'true' : 'false');
+      b.textContent = label;
+      b.addEventListener('click', function () { choose(v, b); });
+      box.appendChild(b);
+    });
+    locked = false;
+  }
+
+  function choose(v, el) {
+    if (locked) return; locked = true;
+    answers[idx] = v;
+    document.querySelectorAll('.opt').forEach(function (o) { o.classList.remove('sel'); o.setAttribute('aria-checked', 'false'); });
+    el.classList.add('sel'); el.setAttribute('aria-checked', 'true');
+    if (!started) { started = true; karmaTrack('diagnosis_start', null, {}); }
+    setTimeout(function () {
+      if (idx < Q.length - 1) { idx++; render(); }
+      else { $('progFill').style.width = '100%'; showResult(); }
+    }, 260);
+  }
+
+  function scores() {
+    var s = { seijo: 0, otome: 0, miko: 0, ressho: 0 };
+    Q.forEach(function (q, i) { s[q[0]] += (answers[i] || 0); });
+    return s;
+  }
+
+  function drawRadar(s) {
+    // 上：聖女 右：乙女 下：烈女 左：巫女
+    var cx = 150, cy = 150, R = 120;
+    var axes = [['seijo', 0, -1], ['otome', 1, 0], ['ressho', 0, 1], ['miko', -1, 0]];
+    var svg = '';
+    [0.25, 0.5, 0.75, 1].forEach(function (k) {
+      var pts = axes.map(function (a) { return (cx + a[1] * R * k) + ',' + (cy + a[2] * R * k); }).join(' ');
+      svg += '<polygon points="' + pts + '" fill="none" stroke="#dcdbe3" stroke-width="' + (k === 1 ? 1 : 0.6) + '"' + (k === 1 ? '' : ' stroke-dasharray="3 3"') + '/>';
+    });
+    svg += '<line x1="' + cx + '" y1="' + (cy - R) + '" x2="' + cx + '" y2="' + (cy + R) + '" stroke="#dcdbe3" stroke-width="0.6"/>';
+    svg += '<line x1="' + (cx - R) + '" y1="' + cy + '" x2="' + (cx + R) + '" y2="' + cy + '" stroke="#dcdbe3" stroke-width="0.6"/>';
+    var shape = axes.map(function (a) { var r = R * s[a[0]] / MAX; return (cx + a[1] * r) + ',' + (cy + a[2] * r); }).join(' ');
+    svg += '<polygon points="' + shape + '" fill="rgba(52,64,122,0.14)" stroke="#34407a" stroke-width="2" stroke-linejoin="round"/>';
+    axes.forEach(function (a) {
+      var t = TYPES[a[0]], r = R * s[a[0]] / MAX;
+      svg += '<circle cx="' + (cx + a[1] * r) + '" cy="' + (cy + a[2] * r) + '" r="4.5" fill="' + t.hex + '"/>';
+      var lx = cx + a[1] * (R + 22), ly = cy + a[2] * (R + 18) + 5;
+      var anchor = a[1] === 1 ? 'start' : a[1] === -1 ? 'end' : 'middle';
+      if (a[1] !== 0) lx = cx + a[1] * (R + 10);
+      svg += '<text x="' + lx + '" y="' + ly + '" text-anchor="' + anchor + '" font-size="16" letter-spacing="2" fill="' + t.hex + '" font-family="Shippori Mincho, serif">' + t.name + '</text>';
+    });
+    $('radar').innerHTML = svg;
+  }
+
+  function showResult() {
+    var s = scores();
+    var top = Math.max.apply(null, ORDER.map(function (k) { return s[k]; }));
+    var tops = ORDER.filter(function (k) { return s[k] === top; });
+    var main = TYPES[tops[0]];
+
+    if (tops.length === 1) {
+      $('resKicker').textContent = 'あなたの中で、いちばん強く出ているのは';
+      $('resType').textContent = main.name;
+      $('resType').style.color = main.hex;
+      $('resTag').textContent = main.tag;
+      $('resLead').innerHTML = main.lead;
+    } else {
+      var names = tops.map(function (k) { return TYPES[k].name; });
+      $('resKicker').textContent = 'あなたの中で、同じ強さで出ているのは';
+      $('resType').textContent = names.join('・');
+      $('resType').style.color = 'var(--accent)';
+      $('resTag').textContent = 'ふたつ以上のカルマが、重なりあっています';
+      $('resLead').innerHTML = tops.map(function (k) { return TYPES[k].lead; }).join('<br><br>');
+    }
+
+    // キーワード（LINEで送る言葉）
+    var kw = $('kwWrap'); kw.innerHTML = '';
+    tops.forEach(function (k) {
+      var c = document.createElement('code'); c.textContent = TYPES[k].name; kw.appendChild(c);
+    });
+    var copy = document.createElement('button'); copy.className = 'copy'; copy.type = 'button'; copy.textContent = 'コピー';
+    copy.addEventListener('click', function () {
+      var text = TYPES[tops[0]].name;
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { copy.textContent = 'コピーしました'; });
+    });
+    kw.appendChild(copy);
+
+    // バー
+    var bars = $('bars'); bars.innerHTML = '';
+    ORDER.forEach(function (k) {
+      var t = TYPES[k];
+      var row = document.createElement('div'); row.className = 'bar';
+      row.innerHTML = '<span style="color:' + t.hex + '">' + t.name + '</span><div class="bar-bg"><div class="bar-fill" style="background:' + t.hex + '"></div></div><span class="bar-score">' + s[k] + ' / ' + MAX + '</span>';
+      bars.appendChild(row);
+      setTimeout(function () { row.querySelector('.bar-fill').style.width = (s[k] / MAX * 100) + '%'; }, 120);
+    });
+
+    drawRadar(s);
+    show('result');
+
+    var lineBtn = $('lineBtn');
+    lineBtn.href = karmaLineUrl();
+    lineBtn.target = '_blank'; lineBtn.rel = 'noopener';
+    lineBtn.onclick = function () { karmaTrack('line_click', 'Lead', { karma_type: tops.map(function (k) { return TYPES[k].name; }).join('・') }); };
+
+    karmaTrack('diagnosis_complete', null, { karma_type: tops.map(function (k) { return TYPES[k].name; }).join('・') });
+  }
+
+  $('start').addEventListener('click', function () { idx = 0; render(); show('quiz'); });
+  $('back').addEventListener('click', function () { if (idx > 0) { idx--; render(); } });
+  $('retry').addEventListener('click', function () { answers = new Array(Q.length); idx = 0; started = false; render(); show('quiz'); });
+})();
+</script>
+</body>
+</html>
